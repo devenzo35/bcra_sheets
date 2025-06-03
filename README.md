@@ -36,13 +36,13 @@ To have a tool that allows you to:
 ## Project Structure
 
 
-
+```
 infla\_script/
 ├── infla.py                 # Main script
 ├── credentials.json         # Service account key (should not be uploaded to the repository)
 ├── inflacion\_mensual.xlsx   # Local output file (optional)
 └── requirements.txt         # Dependencies list
-
+```
 
 
 ## Environment Setup
