@@ -1,8 +1,10 @@
 #!/bin/bash
 
+# Example of automation with cron for this script
+
+# Open the cron jobs editor:
 crontab -e
 
-0 8 2 * * /home/devenzo35/dev/infla_script/infla.py
-
-
-echo "Se actualizaron los datos de inflacion"
+# Add this line to the end of the file:
+# @weekly cd /home/your_user/dev/infla_script && /home/your_user/dev/infla_script/infla_env/bin/python infla.py >> /home/your_user/dev/infla_script/log.txt 2>&1
+# Replace your_user for your real username

@@ -67,6 +67,7 @@ def get_monthly_inflation():
   exec_date = datetime.now().strftime('%y-%m-%d')
 
   df.to_excel(f'registro/inflacion_{exec_date}.xlsx', index=False)
+  print("Datos cargados con exito")
 
   return df
 
