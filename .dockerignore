@@ -1,0 +1,36 @@
+# Archivos de configuración sensibles
+.env
+*.env
+credentials.json
+*.pem
+*.key
+*.crt
+
+# Python compilado
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Virtualenvs
+env/
+venv/
+infla_env/
+
+# Archivos de control de versiones
+.git/
+.gitignore
+
+# IDEs
+.vscode/
+.idea/
+
+# Archivos que generan ruido
+*.log
+*.sqlite3
+*.db
+
+# Otros
+Makefile
+Dockerfile.dev
+docker-compose.yml

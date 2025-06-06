@@ -36,7 +36,7 @@ creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPE
 gc = gspread.authorize(creds)
 
 def get_monthly_inflation():
-  inflation_url = "https://api.bcra.gob.ar/estadisticas/v3.0/monetarias/27?limit=100&desde=2025-01-01&hasta=2025-06-01"
+  inflation_url = "https://api.bcra.gob.ar/estadisticas/v3.0/monetarias/27?limit=100&desde=2025-01-01&hasta=2026-06-01"
   r = requests.get(inflation_url, verify=False)
 
   if r.status_code != 200:
@@ -77,6 +77,6 @@ spreadsheet_id = os.getenv("SPREADSHEET_ID")
 
 sh = gc.open_by_key(spreadsheet_id)
 
-worksheet = sh.worksheet('DataStorage')
+worksheet = sh.worksheet('bcra_data')
 
 set_with_dataframe(worksheet, get_monthly_inflation())

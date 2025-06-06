@@ -1,0 +1,9 @@
+
+services:
+  infla:
+    image: devenzo35/bcra_sheets:latest
+    command: ls -la /app
+    build: .
+    environment:
+      - GOOGLE_SHEETS_CREDENTIALS_PATH=${GOOGLE_SHEETS_CREDENTIALS_PATH}
+      - SPREADSHEET_ID=${SPREADSHEET_ID}   
